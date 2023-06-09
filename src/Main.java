@@ -74,12 +74,12 @@ public class Main {
         System.out.println("Cотрудник с максимальной зп " + employees[index]);
     }
 
-    static int findAverageSalary() {
-        int sum = 0;
-        int averageValue = 0;
+    static double findAverageSalary() {
+        double sum = 0;
+        double averageValue = 0;
         for (Employee employee : employees) {
             sum = sum + employee.getSalary();
-            averageValue = sum / employees.length - 1;
+            averageValue = (double)sum / employees.length;
         }
         return averageValue;
     }
